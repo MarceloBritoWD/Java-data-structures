@@ -1,3 +1,4 @@
+package principal;
 
 public class TesteListaSequencial {
 	public static void main(String[] args) {

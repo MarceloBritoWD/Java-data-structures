@@ -1,3 +1,4 @@
+package principal;
 public class ListaSequencial {
 	private static final int TAMANHO_INICIAL = 5;
 	Object[] lista = new Object[TAMANHO_INICIAL];
