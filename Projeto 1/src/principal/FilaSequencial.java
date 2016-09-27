@@ -1,8 +1,9 @@
 package principal;
 
 public class FilaSequencial {
+	private static final int TAMANHO_INICIAL = 5;
 	private static final int DOBRO = 2;
-	Object[] fila = new Object[2];
+	Object[] fila = new Object[TAMANHO_INICIAL];
 	int fimFila;
 	
 	

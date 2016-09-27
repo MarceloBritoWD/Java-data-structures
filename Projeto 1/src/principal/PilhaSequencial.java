@@ -1,34 +1,58 @@
 package principal;
 
-public class PilhaSequencial {
+import java.util.Arrays;
 
-	Object[] pilha = new Object[5];
-	int topo;
+public class PilhaSequencial {
+	private static final int TAMANHO_INICIAL = 5;
+	private static final int DOBRO = 2;
+	Object[] pilha = new Object[TAMANHO_INICIAL];
+	int proximo;
 	
-	
-	public void push(Object item) {
-		pilha[topo] = item;
-		topo++;
+	public void empilhar(Object item) {
+		if (pilha.length == proximo) {
+			Object[] novaPilha = new Object[proximo * DOBRO];
+			
+			for (int i = 0; i < pilha.length; i++) {
+				novaPilha[i] = pilha[i];
+			}			
+			pilha = novaPilha;			
+		}
+		
+		pilha[proximo] = item;
+		proximo++;
 	}
 	
-	public void pop(Object item) {
-		pilha[topo] = null;
-		topo--;
+	
+	public void desempilhar() throws ArrayIndexOutOfBoundsException {
+		if (pilhaIsVazia()){
+			throw new ArrayIndexOutOfBoundsException();
+		} else {
+			pilha[proximo] = null;
+			proximo--;
+		}
+		
 	}
 	
-	//topo da pilha sem remove-lo
-	public Object peek(Object item) {
-		return pilha[topo];
+
+	public Object consultarTopo() {
+		return pilha[proximo-1];
 	}
 	
-	public Object tamanhoPilha(Object item) {
-		return topo;
+	
+	public int tamanhoPilha() {
+		return proximo;
 	}
+	
 	
 	public boolean pilhaIsVazia(){
-		if (pilha[topo] == null)
-			return true;
-		return false;
+		if (consultarTopo() != null)
+			return false;
+		return true;
 	}
+
 	
+	@Override
+	public String toString() {
+		return "PilhaSequencial [pilha=" + Arrays.toString(pilha) + ", topo=" + proximo + "]";
+	}	
 }

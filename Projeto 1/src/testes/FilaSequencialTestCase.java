@@ -9,56 +9,57 @@ import principal.filaVaziaException;
 
 public class FilaSequencialTestCase {
 	
-	FilaSequencial minhaFila = new FilaSequencial();
+	FilaSequencial testeFila;
 
 	@Before
 	public void setUp() throws Exception {
+		testeFila = new FilaSequencial();
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		testeFila = null;
 	}
-	
-	
 	
 
 	@Test
 	public void testFilaIsVazia() {		
-		Assert.assertEquals(true, minhaFila.filaIsVazia());
+		Assert.assertEquals(true, testeFila.filaIsVazia());
 	}
 	
 	@Test
 	public void testGetPrimeiroElemento() throws filaVaziaException {
-		minhaFila.inserirItem("Marcelo");
-		minhaFila.inserirItem("Brito");
-		Assert.assertEquals("Marcelo", minhaFila.getPrimeiroElemento());
+		testeFila.inserirItem("Marcelo");
+		testeFila.inserirItem("Brito");
+		Assert.assertEquals("Marcelo", testeFila.getPrimeiroElemento());
 	}
 	
 	@Test(expected=filaVaziaException.class)
 	public void testGetPrimeiroElementoComErro() throws filaVaziaException {
-		Assert.assertEquals("Marcelo", minhaFila.getPrimeiroElemento());
+		Assert.assertEquals("Marcelo", testeFila.getPrimeiroElemento());
 	}
 	
 	@Test
 	public void testInserirItem() {
-		minhaFila.inserirItem("Marcelo");		
-		Assert.assertEquals(false, minhaFila.filaIsVazia());
+		testeFila.inserirItem("Marcelo");		
+		Assert.assertEquals(false, testeFila.filaIsVazia());
 	}
 	
 	@Test
 	public void testRemoverItem() throws filaVaziaException{
-		minhaFila.inserirItem("Ayrton");
-		minhaFila.inserirItem("Anderson");
-		minhaFila.inserirItem("Danielle");
-		minhaFila.inserirItem("Marcelo");
-		minhaFila.inserirItem("Davi");
+		testeFila.inserirItem("Ayrton");
+		testeFila.inserirItem("Anderson");
+		testeFila.inserirItem("Danielle");
+		testeFila.inserirItem("Marcelo");
+		testeFila.inserirItem("Davi");
 	
-		minhaFila.removerItem();
-		minhaFila.removerItem();
-		minhaFila.removerItem();
-		minhaFila.removerItem();
+		testeFila.removerItem();
+		testeFila.removerItem();
+		testeFila.removerItem();
 
-		Assert.assertEquals("Davi", minhaFila.getPrimeiroElemento());		
+		Assert.assertEquals("Marcelo", testeFila.removerItem());
+		Assert.assertEquals("Davi", testeFila.getPrimeiroElemento());
+		
 	}
 	
 	
