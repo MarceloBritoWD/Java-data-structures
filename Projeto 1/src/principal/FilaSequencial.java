@@ -43,15 +43,17 @@ public class FilaSequencial {
 		Object retornar = fila[0];
 		fila[0] = null;
 		reorganizarFila();
+		fimFila--;
 		return retornar;
+		
 	}
 	
 	
 	public void reorganizarFila(){
-		Object[] novaFila = new Object[fimFila + 1];
-		for (int i = 1; i < novaFila.length; i++) {
+		Object[] novaFila = new Object[fimFila-1];
+		for (int i = 1; i < fimFila; i++) {
 			novaFila[i-1] = fila[i];
-		}		
+		}
 		fila = novaFila;
 	}	
 	
