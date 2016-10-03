@@ -28,6 +28,12 @@ public class FilaSequencialTestCase {
 	}
 	
 	@Test
+	public void testFilaIsVaziaFalse() {		
+		testeFila.inserirItem("Marcelo");
+		Assert.assertEquals(false, testeFila.filaIsVazia());
+	}
+	
+	@Test
 	public void testGetPrimeiroElemento() throws filaVaziaException {
 		testeFila.inserirItem("Marcelo");
 		testeFila.inserirItem("Brito");

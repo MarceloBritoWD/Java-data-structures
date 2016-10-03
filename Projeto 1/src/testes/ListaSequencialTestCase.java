@@ -4,15 +4,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import principal.ListaSequencial;
 import principal.operacaoInvalidaException;
 
-
-
-@SuppressWarnings("deprecation")
-public class ListaSequencialTestCase {
-	
+public class ListaSequencialTestCase {	
 	ListaSequencial minhaLista; 
 
 	@Before
@@ -138,7 +134,7 @@ public class ListaSequencialTestCase {
 		listaASomar[1] = "Rafael";
 		
 		minhaLista.concatenarListas(listaASomar);
-		System.out.println(minhaLista.imprime());
+//		System.out.println(minhaLista.imprime());
 		
 		Assert.assertEquals("[Davi, Marcelo, Abella, Rafael]", minhaLista.imprime());
 	}

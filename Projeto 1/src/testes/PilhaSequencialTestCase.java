@@ -27,7 +27,7 @@ public class PilhaSequencialTestCase {
 		testePilha.empilhar("Rafael");
 		testePilha.empilhar("Davi");
 		
-		System.out.println(testePilha.toString());
+//		System.out.println(testePilha.toString());
 		Assert.assertEquals("Davi", testePilha.consultarTopo());
 	}
 	
@@ -45,9 +45,18 @@ public class PilhaSequencialTestCase {
 	@Test(expected=ArrayIndexOutOfBoundsException.class)
 	public void testDesempilharComException() throws ArrayIndexOutOfBoundsException {
 		testePilha.desempilhar();
-	}
+	}	
 	
 	
+	@Test
+	public void testConsultarTopo() {
+		testePilha.empilhar("Marcelo");
+		testePilha.empilhar("Rafael");
+		testePilha.desempilhar();
+		testePilha.empilhar("Davi");
+		
+		Assert.assertEquals("Davi", testePilha.consultarTopo());
+	}	
 	
 	@Test
 	public void testTamanhoPilha() {
