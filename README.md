@@ -1,6 +1,7 @@
-# Programação 3 (Estruturas de dados) - 2016.2
+# Programação 3 (Estruturas de dados)
 
-- Repositório de projetos desenvolvidos na cadeira de Programação 3 (Estruturas de dados), ministrada por [@daniel-abella](https://github.com/daniel-abella/), na UNIFACISA.
+- Repositório de projetos desenvolvidos na cadeira de Programação 3 (Estruturas de dados);
+- Professor: [@daniel-abella](https://github.com/daniel-abella/), UNIFACISA - 2016.2.
 
 
 ##Projeto 1
