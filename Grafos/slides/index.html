@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Grafos</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/blood.css" id="theme">
+    <style media="screen">
+      .titulo {
+        font-size: 4.5em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      .fragment a {
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="red">
+          <h1>Grafos Hardcore!!</h1>
+          <hr>
+          <p><a href="https://github.com/MarceloBritoWD" style="color: #fff;">@marcelobritowd</a></p>
+        </section>
+
+        <section data-background="red">
+          <h2>Tipos de grafos?</h2>
+          <p><i>Ponderados</i></p>
+          <p><i>Não Ponderados</i></p>
+          <p><i>Direcionado</i></p>
+          <p><i>Não Direcionado</i></p>
+        </section>
+
+
+        <section data-background="red">
+          <h3>Algoritmo de Djisktra</h3>
+          <li class="fragment">Algoritmo usado para encontrar o menor caminho entre um ponto e outro em grafos.</li>
+          <li class="fragment">Criado por Edsger Djisktra (1956)</li>
+          <li class="fragment">Complexidade: O([m+n]log n)</li>
+          <li class="fragment"><img src="imagens/djisktra.gif" alt="" /></li>
+        </section>
+
+        <section data-background="red">
+          <h3>Busca em Largura (BFS)</h3>
+          <li class="fragment"></li>
+          <li class="fragment"></li>
+          <li class="fragment"></li>
+          <li class="fragment"><img src="imagens/bfs.gif" alt="" /></li>
+        </section>
+
+        <section data-background="red">
+          <h3>Busca em Profundidade (DFS)</h3>
+          <li class="fragment"><img src="imagens/dfs.png" alt="" /></li>
+        </section>
+
+        <section data-background="red">
+          <h3>Ordenação Topológica (Apenas explicar, é apenas uma tioria)</h3>
+        </section>
+
+        <section data-background="red">
+          <h3>Fecho Transitivo (Apenas explicar, é apenas uma tioria)</h3>
+        </section>
+
+        <section data-background="red">
+          <h3>Algoritmo de Warshal</h3>
+        </section>
+
+        <section data-background="red">
+          <h3>Algoritmo de Bellman-Ford</h3>
+          <li class="fragment">Semelhante ao algoritmo de Djisktra</li>
+          <li class="fragment">A diferença entre eles é que ele pode encontrar o menor caminho também em grafos que possuem arestas de peso negativo.</li>
+        </section>
+
+
+        <!-- fundos com cores -->
+        <!-- <section data-background="#ff0000">Cor no fundo</section> -->
+
+        <!-- fundos com imagens -->
+        <!-- <section data-background="imagens/gif-magic.gif">Imagem no fundo</section> -->
+        <!-- <section data-background="imagens/impress.gif">Imagem no fundo</section> -->
+
+        <!-- vídeos em loop! -->
+        <!-- <section data-background-video="video" data-background-video-loop>Vídeos</section> -->
+
+        <!-- um site dentro do próprio slide! -->
+        <!-- <section data-background-iframe="https://willianjusten.com.br">Websites no fundo</section> -->
+
+        <!-- texto apacrecendo gradativamente -->
+        <!-- <section> -->
+          <!-- <li class="fragment">Responsivo e Adaptativo</li>
+          <li class="fragment">Ótimo suporte (até IE8!)</li>
+          <li class="fragment">Pode ser minificado (GZIP)</li>
+          <li class="fragment">Interativo e Estilizável</li>
+          <li class="fragment">Possui efeitos próprios</li>
+          <li class="fragment">Possui acessibilidade</li>
+          <li class="fragment">E mais...</li> -->
+        <!-- </section> -->
+
+        <!-- <section>
+          <pre>
+            <code class="hljs">
+              .classe {
+                propriedade: valor;
+              }
+            </code>
+          </pre>
+        </section> -->
+
+        <!-- Essa transição irá ser passada como um zoom. -->
+        <!-- <section data-transition="zoom">Slide com Zoom</section> -->
+
+        <!-- Escolha a velocidade do slide entre: default, fast or slow! -->
+        <!-- <section data-transition-speed="fast">Slide Rápido</section> -->
+
+
+        <!-- Transição padrão de deslizar para o lado. -->
+        <!-- <section data-transition="slide">Slide</section> -->
+
+        <!-- Desliza quando entra (slide-in) e esmaece quando sai. (fade-out) -->
+        <!-- <section data-transition="slide-in fade-out"></section> -->
+
+        <!-- Esmaece quando entra (fade-in) e desliza quando sai. (slide-out) -->
+        <!-- <section data-transition="fade-in slide-out"></section> -->
+
+        <!-- <section> -->
+          <!-- <p class="fragment grow">grow</p>
+          <p class="fragment shrink">shrink</p>
+          <p class="fragment fade-out">fade-out</p>
+          <p class="fragment current-visible">visible only once</p>
+          <p class="fragment highlight-current-blue">blue only once</p>
+          <p class="fragment highlight-red">highlight-red</p>
+          <p class="fragment highlight-green">highlight-green</p>
+          <p class="fragment highlight-blue">highlight-blue</p>
+
+
+
+        </section>
+        <section>
+            <section>Slide Veritical 1</section>
+            <section>Slide Veritical 2</section>
+        </section> -->
+      </div>
+    </div>
+
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // Veja todas as configurações em:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true, // mostra as setinhas na parte inferior
+        progress: true, // mostra uma barra de progresso
+        center: true, // centraliza os slides
+        transition: 'slide' // none/fade/slide/convex/concave/zoom
+      });
+    </script>
+
+  </body>
+</html>
